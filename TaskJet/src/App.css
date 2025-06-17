@@ -1,0 +1,95 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent main scrollbar */
+}
+
+#root {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  text-align: center;
+  background-color: gray;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: gray;
+  z-index: 10;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.notes-scroll-area {
+  width: 100%;
+  flex: 1 1 auto;
+  /* Height: 100vh minus button height (about 80px + padding) */
+  height: calc(100vh - 80px);
+  margin-top: 80px; /* Same as .notes-container margin-top before */
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  box-sizing: border-box;
+  min-height: 100px;
+  /* Remove margin-top here */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

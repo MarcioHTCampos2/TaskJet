@@ -1,0 +1,30 @@
+.note {
+    background: #fff9a3;
+    border: 1px solid #e2d700;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    width: 250px;
+    box-shadow: 2px 2px 8px #e2d70033;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.note-text {
+    color: black;
+    border: none;
+    background: transparent;
+    resize: none;
+    min-height: 60px;
+    outline: none;
+}
