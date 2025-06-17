@@ -10,6 +10,11 @@
     flex-direction: column;
 }
 
+.note-completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
 .note-title {
     color: black;
     font-weight: bold;
@@ -27,4 +32,24 @@
     resize: none;
     min-height: 60px;
     outline: none;
+}
+
+.note-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.note-actions button {
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #145768;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.note-actions button:hover {
+    background: #fff176;
 }
