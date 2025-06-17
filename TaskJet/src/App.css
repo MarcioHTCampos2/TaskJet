@@ -2,7 +2,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent main scrollbar */
+  overflow: hidden;
+  background: #181a20; /* dark background */
+  color: #e0e0e0;
 }
 
 #root {
@@ -10,8 +12,9 @@ html, body {
   width: 100vw;
   padding: 2rem;
   text-align: center;
-  background-color: gray;
+  background-color: #181a20; /* dark background */
   box-sizing: border-box;
+  color: #e0e0e0;
 }
 
 .app-container {
@@ -28,18 +31,33 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  background: gray;
+  background: #23272f; /* darker bar */
   z-index: 10;
   padding: 16px 0;
-  box-shadow: 0 2px 8px #0002;
+  box-shadow: 0 2px 8px #000a;
+}
+
+.button-container button {
+  background: #31343b;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.button-container button:hover {
+  background: #145768;
+  color: #fff;
 }
 
 .notes-scroll-area {
   width: 100%;
   flex: 1 1 auto;
-  /* Height: 100vh minus button height (about 80px + padding) */
   height: calc(100vh - 80px);
-  margin-top: 80px; /* Same as .notes-container margin-top before */
+  margin-top: 80px;
   overflow-y: auto;
   display: flex;
   justify-content: center;
@@ -55,7 +73,6 @@ html, body {
   max-width: 1600px;
   box-sizing: border-box;
   min-height: 100px;
-  /* Remove margin-top here */
 }
 
 .logo {
@@ -88,6 +105,9 @@ html, body {
 
 .card {
   padding: 2em;
+  background: #23272f;
+  border-radius: 8px;
+  color: #e0e0e0;
 }
 
 .read-the-docs {

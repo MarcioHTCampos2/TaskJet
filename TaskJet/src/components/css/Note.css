@@ -1,22 +1,22 @@
 .note {
-    background: #fff9a3;
-    border: 1px solid #e2d700;
+    background: #23272f;
+    border: 1px solid #31343b;
     border-radius: 8px;
     padding: 16px;
     margin: 12px 0;
     width: 250px;
-    box-shadow: 2px 2px 8px #e2d70033;
+    box-shadow: 2px 2px 8px #000a;
     display: flex;
     flex-direction: column;
 }
 
 .note-completed {
-    opacity: 0.6;
+    opacity: 0.5;
     text-decoration: line-through;
 }
 
 .note-title {
-    color: black;
+    color: #e0e0e0;
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 8px;
@@ -25,13 +25,21 @@
     outline: none;
 }
 
+.note-title:disabled {
+    color: #888;
+}
+
 .note-text {
-    color: black;
+    color: #cfcfcf;
     border: none;
     background: transparent;
     resize: none;
     min-height: 60px;
     outline: none;
+}
+
+.note-text:disabled {
+    color: #666;
 }
 
 .note-actions {
@@ -45,11 +53,13 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    background: #145768;
+    background: #31343b;
+    color: #e0e0e0;
     font-weight: bold;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 .note-actions button:hover {
-    background: #fff176;
+    background: #145768;
+    color: #fff;
 }
